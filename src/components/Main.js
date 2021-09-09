@@ -52,15 +52,15 @@ export default class Main extends React.Component {
       opcion2: dataJSON[0].opciones.b,
       cuenta: 1,
       capitulo: "",
-      historial: []
+      historial: [] 
     })
   }
 
   siguienteCapitulo(letra) {
     let capitulo;
     let contador = this.state.cuenta;
-
-    if (contador < 5) {
+    const cantidadDeCapitulos = (dataJSON.length - 1) / 2; // Porque largo del array se duplica con las opciones a y b, exeptuando por el primer cápitulo.
+    if (contador <= cantidadDeCapitulos ) {
       contador++;
       capitulo = contador + letra;
 

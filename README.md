@@ -1,5 +1,7 @@
 Link a la página: https://afgamalerio.github.io/elige-tu-aventura/
 
+Link al codesandbox: https://codesandbox.io/s/elige-tu-aventura-rzdr9
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

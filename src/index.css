@@ -3,6 +3,7 @@
   box-sizing: border-box;
   background-color: black;
 }
+
 .layout {
   height: 100vh;
   max-width: 500px;

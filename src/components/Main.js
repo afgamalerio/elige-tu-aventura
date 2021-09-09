@@ -52,15 +52,15 @@ export default class Main extends React.Component {
       opcion2: dataJSON[0].opciones.b,
       cuenta: 1,
       capitulo: "",
-      historial: [] 
+      historial: []
     })
   }
 
   siguienteCapitulo(letra) {
     let capitulo;
     let contador = this.state.cuenta;
-    const cantidadDeCapitulos = (dataJSON.length - 1) / 2; // Porque largo del array se duplica con las opciones a y b, exeptuando por el primer cápitulo.
-    if (contador <= cantidadDeCapitulos ) {
+    const cantidadDeCapitulos = (dataJSON.length - 1) / 2; // Porque el largo del array se duplica con las opciones a y b, exeptuando por el primer cápitulo.
+    if (contador <= cantidadDeCapitulos) {
       contador++;
       capitulo = contador + letra;
 
@@ -91,11 +91,15 @@ export default class Main extends React.Component {
     return (
       <div className="layout">
         <h2 className="historia">{this.state.historia}</h2>
-        <div className="opcion">
-          <button type="button" className="botones" onClick={() => this.siguienteCapitulo("a")}>A</button>
-          <p className="opciones">{this.state.opcion1}</p>
-          <button type="button" className="botones" onClick={() => this.siguienteCapitulo("b")}>B</button>
-          <p className="opciones">{this.state.opcion2}</p>
+        <div className="opciones">
+          <div className="opcion">
+            <button type="button" className="botones" onClick={() => this.siguienteCapitulo("a")}>A</button>
+            <h3>{this.state.opcion1}</h3>
+          </div>
+          <div className="opcion">
+            <button type="button" className="botones" onClick={() => this.siguienteCapitulo("b")}>B</button>
+            <h3 className="opcion">{this.state.opcion2}</h3>
+          </div>
         </div>
         <Historial
           historial={this.state.historial}
